@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>CADASTRO HSQE</title>
+	  <link rel="shortcut icon" href="https://totalenergies.com.br/sites/all/themes/custom/totalenergy_theme/favicon.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="./assets3/css/style.css">
+	<link rel="stylesheet" href="./assets3/css/validacao.css">
+	<link rel="stylesheet" href="./assets_reg/register.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+			
+				</div>
+			</div> 
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5">
+					<div class="wrap">
+						<div class="img" style="background-image: url(./assets/images/bg-1.png);"></div>
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Cadastro</h3>
+			      		</div>
+							
+			      	</div>
+							<form action="#" class="signin-form">
+			      		<div class="form-group mt-3">
+			      			<input onchange="onChangeNome()" id="nome" type="text" class="form-control" required>
+			      			<label class="form-control-placeholder" for="username">Nome</label>
+			      		</div>
+
+						  <div class="form-group mt-3">
+							<input onchange="onChangeTel()" id="tel" type="tel" class="form-control" required>
+							<label class="form-control-placeholder"  for="tel">Telefone</label>
+						</div>
+
+						<div class="form-group mt-3">
+							<input onchange="onChangeGestor()" name="gestor_" id="gestor" type="text" class="form-control" required>
+							<label class="form-control-placeholder" for="username">Gestor</label>
+						</div>
+ 
+						<div class="form-group mt-3">
+					<!--		<label  id="label" for="dir">Diretoria</label> -->
+							<select onchange="onChangeDir()" id="dir" type="checkbox" name="options" class="form-control" required>
+								<option value="titulo">Diretoria</option>
+								<option value="comerc">COMERCIAL COMBUSTÍVEIS & REDE</option>
+ 									 <option value="finan">FINANÇAS & COMPLIANCE</option>
+  										<option value="hsqe">​HSEQ & TRANSPORTES</option>
+ 										 <option value="lub">LUBRIFICANTES</option>
+										  <option value="mark">MARKETING</option>
+										  <option value="opera">OPERAÇÕES COMBUSTÍVES</option>
+										  <option value="codir">CODIR</option>
+										  <option value="rh">RECURSOS HUMANOS</option>
+										  <option value="c-base">CONTRATADAS – BASE</option>
+										  <option value="c-trans">CONTRATADAS – TRANSPORTADORA</option>
+										  <option value="c-obras">CONTRATADAS – OBRAS</option>
+							</select>
+							
+						</div>
+
+						<div class="form-group mt-3">
+							<input name="email" type="email" onchange="onChangeEmail()" id="email" class="form-control" required>
+							<label class="form-control-placeholder" for="username">Email</label>
+						</div>
+
+						<div class="form-group mt-3">
+							<input name="password" id="password-field" type="password" onchange="onChangePassword()" class="form-control" required>
+		              <label class="form-control-placeholder" for="password">Password</label>
+		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>	
+						</div>
+
+						<div class="form-group mt-3">
+							<input name="password"   id="confirmPassword" onchange="onChangeConfirmPassword()" type="text" class="form-control" required>
+		              <label class="form-control-placeholder" for="password">Confirme o Password</label>
+		             
+						</div>
+						<div class="error" id="email-required-error">
+							Email é obrigatório
+						</div>
+						<div class="error" id="email-invalid-error">
+							Email é inválido
+						</div>
+						<div class="error" id="password-required-error">
+							Senha é obrigatório
+						</div>
+						<div class="error" id="password-min-length-error">
+							Senha deve ter pelo menos 6 caracteres
+						</div>
+						<div class="error" id="password-doesnt-match-error">
+							Senha e Confirmar senha devem ser iguais
+						</div>
+						<div class="error" id="nome-required-error">
+							Nome é obrigatório
+						</div>
+						<div class="error" id="gestor-required-error">
+							Gertor é obrigatório
+						</div>
+						<div class="error" id="diretoria-required-error">
+							Diretoria é obrigatório
+						</div>
+						<div class="error" id="telefone-required-error">
+							Telefone é obrigatório
+						</div>
+	
+		            <div class="form-group">
+		            	<button type="button" disabled="true" id="register-button" class="form-control btn btn-primary rounded submit px-3" onclick="cadastrar()">CADASTRAR</button>
+					</div>
+
+					<div >
+						
+						<a href="login.html" ><img src="./assets/images/back.png" style="width: 25px; height: 23px;"></a>
+
+					
+				</div> 
+
+
+		          </form>
+			
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+	<script src="./assets3/js/jquery.min.js"></script>
+	<script src="./assets3/js/popper.js"></script>
+  <script src="./assets3/js/bootstrap.min.js"></script>
+  <script src="./assets3/js/main.js"></script>
+  <script src="./assets_reg/cadastro.js"></script>
+  <script src="./assets3/js/validations.js"></script>
+<!--  <script src="../../../firebase-init.js"></script> -->
+
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+
+<script>
+	const firebaseConfig = {
+	apiKey: "AIzaSyBmLxKAi8dPAAP8wUUj7YrNx4Q4bjQVi1g",
+	authDomain: "one-palce.firebaseapp.com",
+	projectId: "one-palce",
+	storageBucket: "one-palce.appspot.com",
+	messagingSenderId: "958901887552",
+	appId: "1:958901887552:web:08e47d0ba3d1abfba735a5",
+	measurementId: "G-96JB3MCJ8T"
+	};
+	firebase.initializeApp(firebaseConfig);
+</script>
+	
+<script>
+
+firebase.auth().onAuthStateChanged(function(user){
+    if (user) {
+        window.location.href = "home_hsqe.html";
+    } 
+    })
+
+</script>
+
+
+
+</html>
+

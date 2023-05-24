@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<title>ANMAS HSQE</title>
+	<link rel="shortcut icon"
+		href="https://totalenergies.com.br/sites/all/themes/custom/totalenergy_theme/favicon.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="./assets/css/templatemo-hexashop.css">
+	<link rel="stylesheet" href="./assets3/css/style.css">
+	<link rel="stylesheet" href="./assets_reg/register.css">
+	<link rel="stylesheet" href="./assets3/css/bootstrap.min.css">
+
+	<script src="./assets3/js/jquery.min.js"></script>
+	<script src="./assets3/js/popper.js"></script>
+	<script src="./assets3/js/bootstrap.min.js"></script>
+	<script src="./assets3/js/main.js"></script>
+	<script src="./assets_reg/relato_anmas.js"></script>
+	<script src="./assets3/js/validations.js"></script>
+	<script type="text/javascript"></script>
+	<script src="assets3/js/validacao.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+
+</head>
+
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+
+				</div>
+
+			</div>
+
+			<div class="row justify-content-center">
+
+				<div class="col-md-9 col-lg-6">
+
+					<div class="wrap">
+
+						<a><img src="../OnePlace/assets/images/logo_anmas_1.png" alt=" "
+								style="width: 100%;  height: 15vw" /></a>
+
+						<div class="login-wrap p-4 p-md-5">
+
+							<div class="d-flex">
+								<div class="w-100">
+									<ul class="mb-1" style="font-size: 18px; color: chocolate;">Seja Bem Vindo</ul><ul data-js="nomelist"></ul>.
+									<div class="w-100">
+												<p style="font-size: 25px; color: chocolate;">&nbsp;&nbsp;<b>DATA DO RELATO</b><span
+												class="date_rel">
+												<script>
+													date = new Date();
+													const data = document.write(date.toLocaleDateString("pt-BR") + " - " + date.getHours() + ":" + date.getMinutes());
+												</script>
+											</span>
+										</p>
+									</div>
+								</div>
+
+							</div><br>
+							<form action="#" class="signin-form">
+								<ol id="Users"></ol>
+								<!--Data Incidente -->
+								<div class="form-group mt-3">
+									<input name="date_e" onchange="onChangeDate_e()" id="date_e" type="date"
+										class="form-control" required>
+									&nbsp;<label for="date_e">Data do Incidente</label>
+								</div>
+								<!--Data Incidente End -->
+
+								<!-- Local -->
+								<div class="form-group mt-3">
+
+									<select onchange="onChangeLocal()" id="local" type="checkbox" name="local"
+										class="form-control" data-toggle="modal"
+										class="botaoModal btn btn-primary btn-block" style="cursor: pointer;" required>
+										<option value="titulo">Local</option>
+										<option value="PINDA">PINDA</option>
+										<option value="BARRA DO GARÇA">BARRA DO GARÇAS</option>
+										<option value="UBERLÂNDIA">UBERLÂNDIA</option>
+										<option value="Escritório Araxá">Escritorio Araxá</option>
+										<option value="Escritório Bauru">BAURU</option>
+										<option value="Escritório Belo Horizonte">BELO HORIZONTE</option>
+										<option value="Escritório Betim">BETIM</option>
+										<option value="Escritório Brasilia">BRASILIA</option>
+										<option value="Escritório Duque de Caxias">DUQUE DE CAXIAS</option>
+										<option value="Escritório Guarulhos">GUARULHOS</option>
+										<option value="Escritório Uberaba">UBERABA</option>
+										<option value="Escritório Várzea Grande">VARGEM GRANDE</option>
+										<option value="TRR Araxá">TRR - Araxá</option>
+										<option value="Escritório Senador Canedo">SENADOR CANEDO</option>
+										<option value="TRR Senador Canedo">TRR – Senador Canedo</option>
+										<option value="Escritório São José dos Campo">São José dos Campo</option>
+										<option value="Escritório São Paulo">ESCRITÓRIO SP</option>
+										<option value="Escritório Ribeirão Preto">RIBEIRÃO PRETO</option>
+										<option value="Escritório Paulínia">PAULÍNIA</option>
+										<option value="TRANSPORTADORA">TRANSPORTADORA</option>
+										<option value="POSTO DE GASOLINA">POSTO DE GASOLINA</option>
+										<option value="Vias Públicas">VIAS PÚBLICAS</option>
+										<option value="SFS">SFS</option>
+										<option value="LOGIN">LOGIN</option>
+										<option value="OUTROS">OUTROS - CLIENTES</option>
+										<option value="HOME OFFICE">HOME OFFICE</option>
+										<option value="QAS">QAS</option>
+									</select>
+								<!--	<label>Você Selecionou <script> 
+</script>
+									</label> -->
+								</div>
+
+								<!-- Modal1-pinda -->
+								<div class="modal fade" id="19" tabindex="-1" role="dialog"
+									aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Especifique o Setor
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc</label>
+												</div>
+												<!-- Group of material radios - option 2 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Escritório
+														Administrativo" checked>&nbsp;
+													<label class="form-check-label" for="rdModal2">Escritório
+														Administrativo</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Escritório
+														Produção">&nbsp;
+													<label class="form-check-label" for="rdModal1">Escritório
+														Produção</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Granel
+														Carregamento/Descarregamento">&nbsp;
+													<label class="form-check-label" for="rdModal1">Granel
+														Carregamento/Descarregamento</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Áreas da Produção
+														Galpão 1 Armazenagem">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas da Produção
+														Galpão 1 Armazenagem</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Áreas da Produção
+														Galpão 2 Linhas de Envase">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas da Produção
+														Galpão 2 Linhas de Envase</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Áreas da Produção
+														Galpão 3 Almoxarifado">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas da Produção
+														Galpão 3 Almoxarifado</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Áreas da Produção
+														Galpão 4 Externo">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas da Produção
+														Galpão 4 Externo</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Área de Mistura
+														Produção">&nbsp;
+													<label class="form-check-label" for="rdModal1">Área de Mistura
+														Produção</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Área de Manutenção
+														Interna e Externa">&nbsp;
+													<label class="form-check-label" for="rdModal1">Área de Manutenção
+														Interna e Externa</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Área dos Tanques
+														Externos e Bacia de contenção">&nbsp;
+													<label class="form-check-label" for="rdModal1">Área dos Tanques
+														Externos e Bacia de contenção</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Área Externa de
+														MetalWorking">&nbsp;
+													<label class="form-check-label" for="rdModal1">Área Externa de
+														MetalWorking</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Cabines Elétricas
+														primária/Secundária Interno e Externo">&nbsp;
+													<label class="form-check-label" for="rdModal1">Cabines Elétricas
+														primária/Secundária Interno e Externo</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Central de Gás
+														interno/Externo e Pit Stop Abastecimento">&nbsp;
+													<label class="form-check-label" for="rdModal1">Central de Gás
+														interno/Externo e Pit Stop Abastecimento</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Laboratório">&nbsp;
+													<label class="form-check-label" for="rdModal1">Laboratório
+														</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Cozinha/Refeitório">&nbsp;
+													<label class="form-check-label"
+														for="rdModal1">Cozinha/Refeitório</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Banheiros e
+														Vestiários">&nbsp;
+													<label class="form-check-label" for="rdModal1">Banheiros e
+														Vestiários</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio"
+														class="form-check-input" id="regras" name="resposta"
+														value="Vias Públicas">&nbsp;
+													<label class="form-check-label" for="rdModal1">Vias Públicas</label>
+												</div>
+												<br>
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="interesse" value="Outro">
+													<label class="form-check-label" for="other">Outro
+													</label>&nbsp;&nbsp;&nbsp;
+													<input onchange="onChangeRegras()" type="text" id="regras"
+														name="outro">
+												</div>
+
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!-- Modal2-barra | Uberlandia -->
+								<div class="modal fade" id="9" tabindex="-1" role="dialog"
+									aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Especifique o Local
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc</label>
+												</div>
+
+												<!-- Group of material radios - option 2 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Área dos Tanques
+														Externos e Bacia de contenção" checked>&nbsp;
+													<label class="form-check-label" for="rdModal2">Área dos Tanques
+														Externos e Bacia de contenção</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Cozinha/Refeitório">&nbsp;
+													<label class="form-check-label"
+														for="rdModal1">Cozinha/Refeitório</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Escritórios">&nbsp;
+													<label class="form-check-label" for="rdModal1">Escritórios</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Laboratório">&nbsp;
+													<label class="form-check-label" for="rdModal1">Laboratório</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Banheiros e
+														Vestiários">&nbsp;
+													<label class="form-check-label" for="rdModal1">Banheiros e
+														Vestiários</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Vias Públicas">&nbsp;
+													<label class="form-check-label" for="rdModal1">Vias Públicas</label>
+												</div>
+												<br>
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="interesse" value="Outro">
+													<label class="form-check-label" for="other">Outro
+													</label>&nbsp;&nbsp;&nbsp;
+													<input type="text" id="regras" name="outro">
+												</div>
+
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!-- Modal4-esc. araxa -->
+								<div class="modal fade" id="7" tabindex="-1" role="dialog"
+									aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Especifique o Local
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Cozinha/Refeitório">&nbsp;
+													<label class="form-check-label"
+														for="rdModal1">Cozinha/Refeitório</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Escritórios">&nbsp;
+													<label class="form-check-label" for="rdModal1">Escritórios</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Banheiros e
+														Vestiários">&nbsp;
+													<label class="form-check-label" for="rdModal1">Banheiros e
+														Vestiários</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Vias Públicas">&nbsp;
+													<label class="form-check-label" for="rdModal1">Vias Públicas</label>
+												</div>
+												<br>
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="interesse" value="Outro">
+													<label class="form-check-label" for="other">Outro
+													</label>&nbsp;&nbsp;&nbsp;
+													<input type="text" id="regras" name="outro">
+												</div>
+
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!-- Modal5- escritorios -->
+								<div class="modal fade" id="6" tabindex="-1"
+									role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Especifique o Local
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Escritórios">&nbsp;
+													<label class="form-check-label" for="rdModal1">Escritórios</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Banheiros e
+														Vestiários">&nbsp;
+													<label class="form-check-label" for="rdModal1">Banheiros e
+														Vestiários</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Vias Públicas">&nbsp;
+													<label class="form-check-label" for="rdModal1">Vias Públicas</label>
+												</div>
+												<br>
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="interesse" value="Outro">
+													<label class="form-check-label" for="other">Outro
+													</label>&nbsp;&nbsp;&nbsp;
+													<input type="text" id="regras" name="resposta">
+												</div>
+
+											</div>  
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!-- Modal vias -->
+								<div class="modal fade" id="vias" tabindex="-1" role="dialog"
+									aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Especifique o Local
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Região Centro Oeste">&nbsp;
+													<label class="form-check-label" for="rdModal1">Região Centro Oeste</label>
+												</div>
+
+												<!-- Group of material radios - option 2 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Região Nordeste" checked>&nbsp;
+													<label class="form-check-label" for="rdModal2">Região Nordeste</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Região Norte ">&nbsp;
+													<label class="form-check-label" for="rdModal1">Região Norte</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Região Sul">&nbsp;
+													<label class="form-check-label" for="rdModal1">Região Sul</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Região Sudeste">&nbsp;
+													<label class="form-check-label" for="rdModal1">Região Sudeste</label>
+												</div>
+
+												<br>
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="interesse" value="outro">
+													<label class="form-check-label" for="other">Outro
+													</label>&nbsp;&nbsp;&nbsp;
+													<input onchange="onChangeRegras()" type="text" id="regras" name="outro">
+												</div>
+
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!-- Modal TRR-->
+								<div class="modal fade" id="7_1" tabindex="-1" role="dialog"
+									aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Especifique o Local
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc">&nbsp;
+													<label class="form-check-label" for="rdModal1">Áreas Externas
+														diversas, Estacionamento, Pátio, Portaria etc</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Escritório" checked>&nbsp;
+													<label class="form-check-label" for="rdModal2">Escritório
+													</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Carregamento/Descarregamento">&nbsp;
+													<label class="form-check-label" for="rdModal1">
+														Carregamento/Descarregamento</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Laboratório">&nbsp;
+													<label class="form-check-label" for="rdModal1">Laboratório
+														</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="resposta" value="Banheiros e
+														Vestiários">&nbsp;
+													<label class="form-check-label" for="rdModal1">Banheiros e
+														Vestiários</label>
+												</div>
+
+												<br>
+												<div class="form-check">
+													<input onchange="onChangeRegras()" type="radio" class="form-check-input" id="regras"
+														name="interesse" value="Outro">
+													<label class="form-check-label" for="rdModal1"> Outro
+													</label>&nbsp;&nbsp;&nbsp;
+													<input type="text" t id="regras" name="outro">
+												</div>
+
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!--modal StopCard-->
+								<div class="modal fade" id="ExemploModalCentralizado_stop" tabindex="-1" role="dialog"
+									aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Aqui você pode nos informar os detalhes: 
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<form>
+													<div class="form-group">
+														<label for="message-text"
+															class="col-form-label">Observações:</label>
+														<textarea class="form-control" id="stop_comentario" onchange="onChangeStop_comentario()" name="gestor" type="text"></textarea>
+													</div>
+												</form>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!--modal_regras-->
+								<div class="modal fade" id="ExemploModalCentralizado_regras" tabindex="-1" role="dialog"
+									aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Regras de Ouro
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="1. Situações de
+														Risco">&nbsp;
+													<label class="form-check-label" for="rdModal1">1. Situações de
+														Risco​</label>
+												</div>
+
+												<!-- Group of material radios - option 2 -->
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="2.
+														Circulação​">&nbsp;
+													<label class="form-check-label" for="rdModal1">2.
+														Circulação​</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="3. Gestos, Posturas e
+														Ferramentas">&nbsp;
+													<label class="form-check-label" for="rdModal1">3. Gestos, Posturas e
+														Ferramentas</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="4. Equipamentos de
+														Proteção Individual (EPI)">&nbsp;
+													<label class="form-check-label" for="rdModal1">4. Equipamentos de
+														Proteção Individual (EPI)</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="5. Permissão de
+														Trabalho">&nbsp;
+													<label class="form-check-label" for="rdModal1">5. Permissão de
+														Trabalho</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="6. Operações de
+														Elevação">&nbsp;
+													<label class="form-check-label" for="rdModal1">6. Operações de
+														Elevação</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="7. Sistemas
+														Alimentados por Energia">&nbsp;
+													<label class="form-check-label" for="rdModal1">7. Sistemas
+														Alimentados por Energia</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="8. Espaços
+														Confinados">&nbsp;
+													<label class="form-check-label" for="rdModal1">8. Espaços
+														Confinados</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="9. Trabalhos de
+														Escavação">&nbsp;
+													<label class="form-check-label" for="rdModal1">9. Trabalhos de
+														Escavação</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="10. Trabalhos em
+														Altura">&nbsp;
+													<label class="form-check-label" for="rdModal1">10. Trabalhos em
+														Altura</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="11. Trabalho a
+														Quente">&nbsp;
+													<label class="form-check-label" for="rdModal1">11. Trabalho a
+														Quente</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeOuro()" type="checkbox" class="form-check-input" id="ouro"
+														name="resposta" value="12. Linha de
+														Perigo">&nbsp;
+													<label class="form-check-label" for="rdModal1">12. Linha de
+														Perigo</label>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-dismiss="modal" onclick="checar()">Continuar</button>
+
+											</div>
+										
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+
+								<!--modal_impacto-->
+								<div class="modal fade" id="ExemploModalCentralizado_impacto" tabindex="-1"
+									role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="TituloModalCentralizado">Tipo de Impacto Gerado
+												</h5>
+												<button type="button" class="close" data-dismiss="modal"
+													aria-label="Fechar">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<!-- Group of material radios - option 1 -->
+												<div class="form-check">
+													<input onchange="onChangeImpacto()" type="checkbox" class="form-check-input" id="impacto"
+														name="resposta" value="Ambiental">&nbsp;
+													<label class="form-check-label" for="rdModal1">Ambiental​</label>
+												</div>
+
+												<!-- Group of material radios - option 2 -->
+
+												<div class="form-check">
+													<input onchange="onChangeImpacto()" type="checkbox" class="form-check-input" id="impacto"
+														name="resposta" value="​Mídia">&nbsp;
+													<label class="form-check-label" for="rdModal1">​Mídia​</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeImpacto()" type="checkbox" class="form-check-input" id="impacto"
+														name="resposta" value="Humano">&nbsp;
+													<label class="form-check-label" for="rdModal1">Humano</label>
+												</div>
+
+												<div class="form-check">
+													<input onchange="onChangeImpacto()" type="checkbox" class="form-check-input" id="impacto"
+														name="resposta" value="​Material">&nbsp;
+													<label class="form-check-label" for="rdModal1">​Material</label>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary"
+														data-dismiss="modal" onclick="checar()">Continuar</button>
+	
+												</div>
+											
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--end modal-->
+								
+								<div class="form-group mt-3">
+									<button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="modal"
+										data-target="#ExemploModalCentralizado_regras">
+										REGRAS DE OURO
+									</button>
+								</div>
+
+								<div class="form-group mt-3">
+																	<select onchange="onChangeEvento()" id="evento" type="checkbox" name="options"
+										class="form-control" required>
+										<option value="titulo">Tipo de Evento</option>
+										<option value="Acidente Fatal">Acidente Fatal</option>
+										<option value="Acidente">Acidente</option>
+										<option value="Quase Acidente (Near miss)">Quase Acidente (Near miss)</option>
+										<option value="Anomalia - Ato Inseguro">Anomalia - Ato Inseguro</option>
+										<option value="Anomalia - Condição insegura">Anomalia - Condição insegura</option>
+										<option value="Poluição">Poluição</option>
+										<option value="Derramamento / Vazamento">Derramamento / Vazamento​</option>
+										<option value="Patrimonial">Patrimonial</option>
+									</select>
+								</div>
+
+								<div class="form-group mt-3">
+									<button type="button" class="btn btn-info btn-lg btn-block" data-toggle="modal"
+										data-target="#ExemploModalCentralizado_impacto">
+										TIPO DE IMPACTO
+									</button>
+								</div>
+
+								<div class="form-group mt-3">
+									<input name="gestor" onchange="onChangeDescricao()" id="descricao" type="text"
+										class="form-control" required>
+									<label class="form-control-placeholder" for="username">Descrição</label>
+								</div>
+
+								<div class="form-group mt-3">
+									<textarea cols="40" rows="5" name="acao" onchange="onChangeAcao()" id="acao"
+										type="text" class="form-control" required></textarea>
+									<label class="form-control-placeholder" for="acao">Ação Tomada</label>
+								</div>
+
+								<div class="form-group mt-3">
+
+									<select onchange="onChangeStop()" id="stop" type="checkbox" name="options"
+										class="form-control" required>
+										<option value="titulo">Você usou STOP CARD?</option>
+										<option value="yes">SIM</option>
+										<option value="no">NÃO</option>
+
+									</select>
+
+								</div>
+								<!--Botão Cadastrar-->
+								<div class="form-group">
+									<button type="button" id="register-button"
+										class="form-control btn btn-primary rounded submit px-3"
+										onclick="Relatos()">ENVIAR RELATO</button>
+								</div>
+								<!--Botão Cadastrar End-->
+								<div>
+
+									<a href="home_hsqe.html"><img src="../OnePlace/assets/images/back.png"
+											style="width: 25px; height: 23px;"></a>
+
+								</div>
+
+
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$('select').on('change', function () {
+			if ($(this).val() == "PINDA") {
+				$('#19').modal('show');
+			}
+			if ($(this).val() == "BARRA DO GARÇA") {
+				$('#9').modal('show');
+			}
+			if ($(this).val() == "UBERLÂNDIA") {
+				$('#9').modal('show');
+			}
+			if ($(this).val() == "Escritório Araxá") {
+				$('#7').modal('show');
+			}
+			if ($(this).val() == "Escritório Bauru") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Belo Horizonte") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Betim") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Brasilia") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Duque de Caxias") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Guarulhos") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Paulínia") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Ribeirão Preto") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório São Paulo") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Senador Canedo") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório São José dos Campo") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Uberaba") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Escritório Várzea Grande") {
+				$('#6').modal('show');
+			}
+			if ($(this).val() == "Vias Públicas") {
+				$('#vias').modal('show');
+			}
+			if ($(this).val() == "TRR Araxá") {
+				$('#7_1').modal('show');
+			}
+			if ($(this).val() == "TRR Senador Canedo") {
+				$('#7_1').modal('show');
+			}
+			if ($(this).val() == "yes") {
+				$('#ExemploModalCentralizado_stop').modal('show');
+			}
+		});
+	</script>
+
+<script type="text/javascript">
+
+	function checar()
+	{	
+		
+		const selectedRadio = document.querySelector("input[name='resposta']:checked").value
+		
+			//	console.log(selectedRadio)
+		//alert("Escolheu: " + selectedRadio); 
+	}
+	</script>
+
+	<script>
+
+	function clickRadio() {
+			if ($("#rdModal1").prop("checked") == true) {
+
+			location.href = "http://google.com";
+			console.log("#rdModal1".value);}
+	}
+	</script>
+
+
+	
+
+	<script>
+
+		const firebaseConfig = {
+			apiKey: "AIzaSyBmLxKAi8dPAAP8wUUj7YrNx4Q4bjQVi1g",
+			authDomain: "one-palce.firebaseapp.com",
+			projectId: "one-palce",
+			storageBucket: "one-palce.appspot.com",
+			messagingSenderId: "958901887552",
+			appId: "1:958901887552:web:08e47d0ba3d1abfba735a5",
+			measurementId: "G-96JB3MCJ8T"
+		};
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<script>
+
+		firebase.auth().onAuthStateChanged(function (user) {
+			if (!user) {
+				window.location.href = "login.html";
+			}
+		})
+
+		
+
+	</script>
+<script>
+
+	firebase.auth().onAuthStateChanged(user => {
+	 if(user) {
+	//  findTransaction(user);
+	
+	
+	
+	const nomelist = document.querySelector('[data-js="nomelist"]')
+	const db = firebase.firestore()
+
+			db.collection('Users') .where('user.uid', '==', user.uid).get()
+			.then(snapshot => {
+			const nomelis	= snapshot.docs.reduce((acc, doc) => 
+				 {
+				acc += `<li>${doc.data().Nome}</li>`
+				return acc	
+				 }, '')
+
+				nomelist.innerHTML = nomelis
+	})
+.catch (err => {
+	console.log(err.message)
+})	
+}
+	})	
+	
+	</script>
+
+	<!-- Modal 
+<script>
+	var otherCheckbox = document.querySelector ('entrada [valor = "outro"]');
+var otherText = document.querySelector ('input [id = "otherValue"]');
+
+
+otherCheckbox.onchange = function () {
+  if (otherCheckbox.checked) {
+    otherText.style.visibility = 'visible';
+    otherText.value = '';
+  } else {
+    otherText.style.visibility = 'hidden';
+  }
+};
+</script>-->
+
+</body>
+
+</html>
