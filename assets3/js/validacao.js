@@ -65,6 +65,12 @@ function register() {
     window.location.href = "cadastro.html";
 }
 
+function register_() {
+    
+    window.location.href = "./cadastro_mobile.html";
+}
+
+
 function toggleEmailErrors() {
     const email = form.email1().value;
     form.emailRequiredError().style.display = email ? "none" : "block";
