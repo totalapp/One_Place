@@ -138,46 +138,7 @@ console.log(data);
       })
     }
 
-      function cadastrar_m(){
-        //showLoading();
-         const email = form.email_().value;
-         const password = form.password_().value;
-        
-         firebase.auth().createUserWithEmailAndPassword(
-            email, password
-            ).then(data => {
-             
-              const uid = data.user.uid;
-        console.log(data);
-             const users = firebase.firestore()
-             .collection('User');
-              users.doc(uid)
-              .set( {
-                 // console.log("yes"),
-                Nome: form.nome_().value,
-                Telefone: form.telefone().value,
-                Gestor : form.gestor_().value,
-                Diretoria : form.diretoria().value,
-                Email : form.email_().value,
-              });
-              
-        
-              alert('Conta Criada com sucesso');
-               window.location.href = "home_hsqe.html";
-        
-            })
-              .catch(() => {
-        
-                  alert('Erro ao Salvar o Cadastro')
-        
-              })
-        
 
-   .catch(error => {
-      //  hideLoading();
-        alert(getErrorMessage(error));
-    })
-}
 
 function getErrorMessage(error) {
     if(error.code == "auth/email-already-in-use") {

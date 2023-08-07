@@ -126,6 +126,20 @@ function logout() {
 	})
 	
 	}
+
+    function logout_m() {
+
+        firebase.auth().signOut().then(() => {
+        
+        window.location.href = "../../mobile/home_mobile.html";
+        
+        }).catch(() => {
+        
+        alert('Erro ao Fazer LOGOUT');
+        
+        })
+        
+        }
 	
 	function modal_ok() {
 		

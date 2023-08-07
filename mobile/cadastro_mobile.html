@@ -36,23 +36,23 @@
 			      	</div>
 							<form action="#" class="signin-form">
 			      		<div class="form-group mt-3">
-			      			<input onchange="onChangeNome()" id="nome" type="text" class="form-control" required>
+			      			<input onchange="onChangeNome()" id="nome" type="text" class="form-control">
 			      			<label class="form-control-placeholder" for="nome">Nome</label>
 			      		</div>
 
 						  <div class="form-group mt-3">
-							<input onchange="onChangeTel()" id="tel" type="tel" class="form-control" required>
+							<input onchange="onChangeTel()" id="tel" type="tel" class="form-control">
 							<label class="form-control-placeholder" for="tel">Telefone</label>
 						</div>
 
 						<div class="form-group mt-3">
-							<input onchange="onChangeGestor()" name="gestor_" id="gestor" type="text" class="form-control" required>
+							<input onchange="onChangeGestor()" name="gestor_" id="gestor" type="text" class="form-control">
 							<label class="form-control-placeholder" for="gestor">Gestor</label>
 						</div>
  
 						<div class="form-group mt-3">
 					<!--		<label  id="label" for="dir">Diretoria</label> -->
-							<select onchange="onChangeDir()" id="dir" type="checkbox" name="options" class="form-control" required>
+							<select onchange="onChangeDir()" id="dir" type="checkbox" name="options" class="form-control">
 								<option value="titulo">Diretoria</option>
 								<option value="comerc">COMERCIAL COMBUSTÍVEIS & REDE</option>
  									 <option value="finan">FINANÇAS & COMPLIANCE</option>
@@ -70,18 +70,18 @@
 						</div>
 
 						<div class="form-group mt-3">
-							<input name="email" type="email" onchange="onChangeEmail()" id="email" class="form-control" required>
+							<input name="email" type="email" onchange="onChangeEmail()" id="email" class="form-control">
 							<label class="form-control-placeholder" for="email">Email</label>
 						</div>
 
 						<div class="form-group mt-3">
-							<input name="password" id="password-field" type="password" onchange="onChangePassword()" class="form-control" required>
+							<input name="password" id="password-field" type="password" onchange="onChangePassword()" class="form-control">
 		              <label class="form-control-placeholder" for="password-field">Password</label>
 		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>	
 						</div>
 
 						<div class="form-group mt-3">
-							<input name="password"   id="confirmPassword" onchange="onChangeConfirmPassword()" type="text" class="form-control" required>
+							<input name="password"   id="confirmPassword" onchange="onChangeConfirmPassword()" type="text" class="form-control">
 		              <label class="form-control-placeholder" for="confirmPassword">Confirme o Password</label>
 		             
 						</div>
@@ -114,7 +114,7 @@
 						</div>
 	
 		            <div class="form-group">
-		            	<button type="button" disabled="true" id="register-button" class="form-control btn btn-primary rounded submit px-3" onclick="cadastrar_m()">CADASTRAR</button>
+		            	<button type="button" disabled="true" id="register-button" class="form-control btn btn-primary rounded submit px-3" onclick="cadastrar()">CADASTRAR</button>
 					</div>
 
 					<div >
@@ -139,7 +139,7 @@
 	
   <script src="../assets3/js/bootstrap.min.js"></script>
   <script src="../assets3/js/main.js"></script>
-  <script src="../assets_reg/cadastro.js"></script>
+  <script src="cadastro_mobile.js"></script>
   <script src="../assets3/js/validations.js"></script>
 <!--  <script src="../../../firebase-init.js"></script> -->
 
@@ -164,7 +164,7 @@
 
 firebase.auth().onAuthStateChanged(function(user){
     if (user) {
-        window.location.href = "home_hsqe.html";
+        window.location.href = "home_hsqe_mobile.html";
     } 
     })
 
