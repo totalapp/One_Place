@@ -293,6 +293,16 @@ footer2 {
   text-align:right;
 }
 
+.footer1-btn1-close4{
+  width: 120px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #3aec23;
+  color: #413f3f;
+  border-radius: 3px;
+  text-align:right;
+}
+
 .footer1-btn1-close3-mobile{
   width: 120px;
   padding: 10px;
