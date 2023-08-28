@@ -9,6 +9,8 @@
   <link rel="shortcut icon"
       href="https://totalenergies.com.br/sites/all/themes/custom/totalenergy_theme/favicon.ico" />
 
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,45 +23,41 @@
 
   <link href="img/favicon.ico" rel="icon">
 
-
-
-
 <style>
 
 * {
 	box-sizing: border-box;
 }
 
-BODY {background-image: url(../assets/images/fundo_rh.png); background-repeat: no-repeat; background-position: 35% 20px; background-attachment: fixed;}
 
 label {
 	background: #444;
 	color: #fff;
 	transition: transform 400ms ease-out;
 	display: inline-block;
-    min-height: 50%;
-	width: 50vw;
-	height: 50vh;
+    min-height: 40%;
+	width: 50%;
+	height: 40%;
 	position: relative;
 	z-index: 1;
 	text-align: center;
-	line-height: 10vh;
+	line-height: 8vh;
 }
 
 form {
 	position:relative;
-	top: 50;
-	left: 50;
+	top: 40%;
+	left: 0;
 	bottom: 0;
-	right: 0;
+	right: 50%;
 	white-space: nowrap;
 }
 input {
-	position: absolute;
+	position:absolute;
 }
 
 .keys {
-	position: fixed;
+	position:relative;
 	z-index: 10;
 	bottom: 0;
 	left: 0;
@@ -99,8 +97,8 @@ input:nth-of-type(4):checked ~ label {
 }
 
 label {
-    opacity: 90%;
-	background: #444;
+    opacity: 85%;
+	background: #3e69b9;
 	background-size: cover;
 	font-size: 3rem;
     border-style:none;
@@ -108,7 +106,7 @@ label {
 
 label[for="diamonds"],
 label[for="hearts"] {
-	background: #cc0000;
+	background: #5c852e;
 }
 
 label:before,
@@ -148,7 +146,8 @@ label:after {
 
 </head>
 
-<body>
+<body style="background-image:url(../assets/images/fundo_rh.png)">
+
 
 
     <form >
@@ -157,11 +156,13 @@ label:after {
         <input type="radio" name="fancy" value="hearts" id="hearts" />
     <!--    <input type="radio" name="fancy" value="spades" id="spades" />
         <input type="radio" name="fancy" value="diamonds" id="diamonds" />		-->
-        <label for="clubs"> <p style="font-size: 15px;">Convite para a GPT 2023</p>
-            <embed type="video/mp4" src="../assets/images/1.mp4" width="380" height="220" autostart="false"> 
+        <label for="clubs"> <p style="font-size: 15px;">1 - Convite para a GPT 2023</p>
+            <img src="../assets/images/v1.png" style="width:30%;cursor:zoom-in"
+            onclick="document.getElementById('modal01').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
-        <label for="hearts"><p style="font-size: 15px;"> GPTW 2023 - Agora é com Você!!</p>
-            <embed type="video/mp4" src="../assets/images/2.mp4" width="380" height="220" autostart="false"> 
+        <label for="hearts"><p style="font-size: 15px;">2 - GPTW 2023 - Agora é com Você!!</p>
+            <img src="../assets/images/v2.png" style="width:30%;cursor:zoom-in"
+            onclick="document.getElementById('modal02').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
      <!--   <label for="spades">Spades
             <embed type="video/mp4" src="../assets/images/2.mp4" width="380" height="220" autostart="false"> 
@@ -170,12 +171,29 @@ label:after {
         <div class="keys"></div>
 </form>  
 
+
+
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom" style="text-align: center;">
+        <embed type="video/mp4" src="../assets/images/1.mp4" width="380" height="220" autostart="false"> 
+    </div>
+  </div>
+</div>
+
+<div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom " style="text-align: center;">
+        <embed type="video/mp4" src="../assets/images/2.mp4" width="380" height="220" autostart="false"> 
+    </div>
+  </div>
+</div>
+
+
+
 </body>
 
-<script>
 
-
-</script>
 
 
 </html>
