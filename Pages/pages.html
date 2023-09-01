@@ -36,7 +36,7 @@ label {
 	transition: transform 400ms ease-out;
 	display: inline-block;
     min-height: 40%;
-	width: 38%;
+	width: 30%;
 	height: 40%;
 	position: relative;
 	z-index: 1;
@@ -159,18 +159,21 @@ label:after {
             <img src="../assets/images/v1.png" style="width:30%;cursor:zoom-in"
             onclick="document.getElementById('modal01').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
-        <label for="hearts"><p style="font-size: 15px;">2 - GPTW 2023 - Agora é com Você!!</p>
+        <label for="hearts"><p style="font-size: 15px;">2 - GPTW 2023-Agora é com Você!!</p>
             <img src="../assets/images/v2.png" style="width:30%;cursor:zoom-in"
             onclick="document.getElementById('modal02').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
-		<label for="diamonds"><p style="font-size: 15px;">3 - GPTW 2023 - Essa pesquisa é muito importante!</p>
+		<label for="spades"><p style="font-size: 14px;">3 - GPTW 2023-Essa pesquisa é muito importante!</p>
             <img src="../assets/images/v3.png" style="width:35%;cursor:zoom-in"
             onclick="document.getElementById('modal03').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
-     <!--   <label for="spades">Spades
-            <embed type="video/mp4" src="../assets/images/2.mp4" width="380" height="220" autostart="false"> 
-        </label><label for="diamonds"> Diamonds<embed type="video/mp4" src="../assets/images/2.mp4" width="380" height="220" autostart="false"> </label> -->
-
+       <label for="hearts"><p style="font-size: 15px;">4 - GPTW 2023-Juntos podemos melhorar</label></p>
+	   <img src="../assets/images/v4.png" style="width:35%;cursor:zoom-in"
+	   onclick="document.getElementById('modal04').style.display='block'"><p style="font-size: 5px;"></p> 
+        </label>
+		
+		<!--<label for="diamonds"> Diamonds<embed type="video/mp4" src="../assets/images/2.mp4" width="380" height="220" autostart="false"> </label> 
+		-->
         <div class="keys"></div>
 </form>  
 
@@ -195,6 +198,13 @@ label:after {
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom " style="text-align: center;">
         <embed type="video/mp4" src="../assets/images/3.mp4" width="500" height="340" autostart="true"> 
+    </div>
+  </div>
+</div>
+<div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom " style="text-align: center;">
+        <embed type="video/mp4" src="../assets/images/4.mp4" width="500" height="340" autostart="true"> 
     </div>
   </div>
 </div>
