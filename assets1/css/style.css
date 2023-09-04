@@ -385,6 +385,10 @@ a:focus {
   background-color: #598a91;
 }
 
+.do_section .content-box.bg-azul {
+  background-color: #0462FF;
+}
+
 .do_section .content-box.bg-com {
   background-color: #52661dce;
 }
