@@ -36,12 +36,12 @@ label {
 	transition: transform 400ms ease-out;
 	display: inline-block;
     min-height: 40%;
-	width: 22%;
+	width: 19%;
 	height: 40%;
 	position: relative;
 	z-index: 1;
 	text-align: center;
-	line-height: 8vh;
+	line-height: 4vh;
 }
 
 form {
@@ -63,7 +63,7 @@ input {
 	left: 0;
 	right: 0;
 	padding: 1rem;
-	color: #fff;
+	color: #fefbfb;
 	text-align: center;
 	transition: all 300ms linear;
 	opacity: 0;
@@ -76,8 +76,9 @@ input:focus ~ .keys {
 input:nth-of-type(1):checked ~ label:nth-of-type(1), 
 input:nth-of-type(2):checked ~ label:nth-of-type(2),
 input:nth-of-type(3):checked ~ label:nth-of-type(3),
-input:nth-of-type(3):checked ~ label:nth-of-type(4),
-input:nth-of-type(4):checked ~ label:nth-of-type(5){
+input:nth-of-type(4):checked ~ label:nth-of-type(4),
+input:nth-of-type(5):checked ~ label:nth-of-type(5),
+input:nth-of-type(6):checked ~ label:nth-of-type(6){
    z-index: 0;
 }
 
@@ -94,11 +95,15 @@ input:nth-of-type(3):checked ~ label {
 }
 
 input:nth-of-type(4):checked ~ label {
-	transform: translate3d(-300%, 0, 0);
+	transform: translate3d(-400%, 0, 0);
 }
 
 input:nth-of-type(5):checked ~ label {
-	transform: translate3d(-300%, 0, 0);
+	transform: translate3d(-500%, 0, 0);
+}
+
+input:nth-of-type(6):checked ~ label {
+	transform: translate3d(-600%, 0, 0);
 }
 
 label {
@@ -159,30 +164,33 @@ label:after {
 
         <input type="radio" name="fancy" autofocus value="clubs" id="clubs" />
         <input type="radio" name="fancy" value="hearts" id="hearts" />
-      <input type="radio" name="fancy" value="diamonds" id="diamonds" />		
-        <label for="clubs"> <p style="font-size: 15px;">1 - Convite para a GPT 2023</p>
+      <input type="radio" name="fancy" value="diamonds" id="spades" />		
+        <label for="clubs"> <p style="font-size: 16px;">1 - GPTW2023</p> <p style="font-size: 12px;"> Convite para a GPT 2023</p>
             <img src="../assets/images/v1.png" style="width:30%;cursor:zoom-in"
             onclick="document.getElementById('modal01').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
-        <label for="hearts"><p style="font-size: 15px;">2 - GPTW2023-Agora é com Você!!</p>
+        <label for="hearts"><p style="font-size: 16px;">2 - GPTW2023</p> <p style="font-size: 12px;"> Agora é com Você!!</p>
             <img src="../assets/images/v2.png" style="width:30%;cursor:zoom-in"
             onclick="document.getElementById('modal02').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
-		<label for="spades"><p style="font-size: 14px;">3 - GPTW2023-Essa pesquisa é muito importante!</p>
+		<label for="spades"><p style="font-size: 16px;">3 - GPTW2023</p> <p style="font-size: 12px;"> Essa pesquisa é muito importante!</p>
             <img src="../assets/images/v3.png" style="width:35%;cursor:zoom-in"
             onclick="document.getElementById('modal03').style.display='block'"><p style="font-size: 5px;"></p>
         </label>
-       <label for="hearts"><p style="font-size: 15px;">4 - GPTW2023-Juntos podemos melhorar</label></p>
+       <label for="hearts"><p style="font-size: 16px;">4 - GPTW2023</p> <p style="font-size: 12px;"> Juntos podemos melhorar</label></p>
 	   <img src="../assets/images/v4.png" style="width:35%;cursor:zoom-in"
 	   onclick="document.getElementById('modal04').style.display='block'"><p style="font-size: 5px;"></p> 
         </label>
-		<label for="spades"><p style="font-size: 13px;">5 - GPTW2023-A opinião de vocês é muito importante</label><br></p>
+		<label for="spades"><p style="font-size: 16px;">5 - GPTW2023</p> <p style="font-size: 12px;"> A opinião de vocês é muito importante</label><br></p>
 		<img src="../assets/images/v5.png" style="width:35%;cursor:zoom-in"
 		onclick="document.getElementById('modal05').style.display='block'"><p style="font-size: 5px;"></p> 
 		 </label>
+		 <label for="hearts"><p style="font-size: 16px;">6 - GPTW2023</p> <p style="font-size: 12px;"> Somente juntos podemos melhorar</label></p>
+		 <img src="../assets/images/v6.png" style="width:35%;cursor:zoom-in"
+		 onclick="document.getElementById('modal06').style.display='block'"><p style="font-size: 5px;"></p> 
+		  </label>
 		
-		<!--<label for="diamonds"> Diamonds<embed type="video/mp4" src="../assets/images/2.mp4" width="380" height="220" autostart="false"> </label> 
-		-->
+		
         <div class="keys"></div>
 </form>  
 
@@ -220,6 +228,12 @@ label:after {
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom " style="text-align: center;">
         <embed type="video/mp4" src="../assets/images/5.mp4" width="500" height="340" autostart="true"> 
+    </div>
+  </div>
+  <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom " style="text-align: center;">
+        <embed type="video/mp4" src="../assets/images/6.mp4" width="500" height="340" autostart="true"> 
     </div>
   </div>
 </div>
